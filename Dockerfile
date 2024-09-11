@@ -7,6 +7,6 @@ RUN docker-php-ext-install zip
 COPY --from=composer:2.7 /usr/bin/composer /usr/local/bin/composer
 
 WORKDIR /var/www/html
-COPY * .
+COPY ./ .
 
 RUN composer install
